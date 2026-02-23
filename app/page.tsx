@@ -1,65 +1,52 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-gradient-to-b from-blue-950 to-blue-900 text-white">
+      
+      {/* Header */}
+      <header className="flex justify-between items-center px-8 py-6">
+        <h1 className="text-2xl font-bold tracking-tight">💙 Silent Safety</h1>
+        <div className="flex gap-4">
+          <a href="/login" className="text-blue-200 hover:text-white transition">Login</a>
+          <a href="/signup" className="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded-full text-sm font-semibold transition">Join Free</a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Hero */}
+      <section className="text-center px-8 py-24">
+        <h2 className="text-5xl font-bold mb-6 leading-tight">You are not alone.<br/>Recovery is possible.</h2>
+        <p className="text-blue-200 text-xl mb-10 max-w-xl mx-auto">A free, safe space for people in recovery, their friends and family. Check in daily, find support, and access resources anytime.</p>
+        <a href="/signup" className="bg-blue-500 hover:bg-blue-400 text-white px-8 py-4 rounded-full text-lg font-semibold transition">Get Started — It's Free</a>
+      </section>
+
+      {/* Features */}
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8 py-16 max-w-6xl mx-auto">
+        <div className="bg-blue-800 rounded-2xl p-6">
+          <div className="text-4xl mb-4">📋</div>
+          <h3 className="text-xl font-bold mb-2">Daily Check-ins</h3>
+          <p className="text-blue-200">Track your mood and progress every day. Celebrate your wins, however small.</p>
         </div>
-      </main>
-    </div>
-  );
+        <div className="bg-blue-800 rounded-2xl p-6">
+          <div className="text-4xl mb-4">🆘</div>
+          <h3 className="text-xl font-bold mb-2">Emergency Help</h3>
+          <p className="text-blue-200">Instant access to crisis support when you need it most. You are never alone.</p>
+        </div>
+        <div className="bg-blue-800 rounded-2xl p-6">
+          <div className="text-4xl mb-4">💬</div>
+          <h3 className="text-xl font-bold mb-2">Community</h3>
+          <p className="text-blue-200">Connect with others who understand. Share your journey in a safe, supportive space.</p>
+        </div>
+        <div className="bg-blue-800 rounded-2xl p-6">
+          <div className="text-4xl mb-4">📚</div>
+          <h3 className="text-xl font-bold mb-2">Resources</h3>
+          <p className="text-blue-200">Articles, guides and tools for people in recovery and their loved ones.</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-blue-300 py-8 text-sm">
+        <p>💙 Silent Safety — Free forever. Built with love for those who need it.</p>
+      </footer>
+
+    </main>
+  )
 }
