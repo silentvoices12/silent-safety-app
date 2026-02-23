@@ -4,7 +4,7 @@ import { useState } from "react";
 const tabs = ["Understanding", "How to Help", "Setting Boundaries", "Talk to Someone", "Resources"];
 
 const understanding = [
-  { icon: "🧠", title: "Addiction is a disease not a choice", body: "Addiction changes the brain. Your loved one is not weak or bad — they are unwell and need support not judgement." },
+  { icon: "🧠", title: "Addiction is a disease not a choice", body: "Addiction changes the brain. Your loved one is not weak — they are unwell and need support not judgement." },
   { icon: "💔", title: "It affects the whole family", body: "Living with someone in addiction is exhausting and heartbreaking. Your feelings are all completely valid." },
   { icon: "🔄", title: "Recovery is not linear", body: "Relapse is common and does not mean failure. Recovery is a journey with ups and downs." },
   { icon: "🌱", title: "Change is possible", body: "Millions of people recover from addiction every year. Your loved one can have a real chance at a full life." },
@@ -41,7 +41,7 @@ const helplines = [
 
 const resources = [
   { icon: "📖", title: "Beyond Addiction Book for Families", url: "https://beyondaddictionbook.com" },
-  { icon: "📖", title: "Codependent No More Melody Beattie", url: "https://www.hazeldenbettyford.org/products/codependent-no-more" },
+  { icon: "📖", title: "Codependent No More by Melody Beattie", url: "https://www.hazeldenbettyford.org/products/codependent-no-more" },
   { icon: "🌐", title: "Al-Anon Family Groups", url: "https://al-anon.org.uk" },
   { icon: "🌐", title: "Adfam Families Living with Addiction", url: "https://adfam.org.uk" },
   { icon: "🌐", title: "Partnership to End Addiction", url: "https://drugfree.org" },
@@ -52,87 +52,87 @@ const resources = [
 export default function FamilyHub() {
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <main className=\"min-h-screen bg-gradient-to-b from-rose-950 to-rose-900 text-white\">
-      <header className=\"flex justify-between items-center px-8 py-6\">
-        <a href=\"/\" className=\"text-2xl font-bold\">Silent Safety</a>
-        <a href=\"/emergency\" className=\"bg-red-600 hover:bg-red-500 px-4 py-2 rounded-full text-sm font-semibold transition\">Emergency</a>
+    <main className="min-h-screen bg-gradient-to-b from-rose-950 to-rose-900 text-white">
+      <header className="flex justify-between items-center px-8 py-6">
+        <a href="/" className="text-2xl font-bold">Silent Safety</a>
+        <a href="/emergency" className="bg-red-600 hover:bg-red-500 px-4 py-2 rounded-full text-sm font-semibold transition">Emergency</a>
       </header>
-      <section className=\"text-center px-8 py-12\">
-        <div className=\"text-6xl mb-4\">👨‍👩‍👧</div>
-        <h2 className=\"text-4xl font-bold mb-4\">Family and Friends Hub</h2>
-        <p className=\"text-rose-200 text-lg max-w-xl mx-auto\">You are not alone. This space is for you.</p>
+      <section className="text-center px-8 py-12">
+        <div className="text-6xl mb-4">👨‍👩‍👧</div>
+        <h2 className="text-4xl font-bold mb-4">Family and Friends Hub</h2>
+        <p className="text-rose-200 text-lg max-w-xl mx-auto">You are not alone. This space is for you.</p>
       </section>
-      <div className=\"flex flex-wrap justify-center gap-3 px-8 mb-10\">
+      <div className="flex flex-wrap justify-center gap-3 px-8 mb-10">
         {tabs.map((tab, i) => (
           <button key={i} onClick={() => setActiveTab(i)}
-            className={`px-5 py-3 rounded-full font-semibold transition text-sm ${activeTab === i ? \"bg-rose-500 text-white\" : \"bg-rose-800 hover:bg-rose-700 text-rose-200\"}`}>
+            className={`px-5 py-3 rounded-full font-semibold transition text-sm ${activeTab === i ? "bg-rose-500 text-white" : "bg-rose-800 hover:bg-rose-700 text-rose-200"}`}>
             {tab}
           </button>
         ))}
       </div>
-      <div className=\"max-w-4xl mx-auto px-8 pb-16\">
+      <div className="max-w-4xl mx-auto px-8 pb-16">
         {activeTab === 0 && (
-          <div className=\"grid gap-4 md:grid-cols-2\">
+          <div className="grid gap-4 md:grid-cols-2">
             {understanding.map((item, i) => (
-              <div key={i} className=\"bg-rose-800 rounded-2xl p-6\">
-                <div className=\"text-4xl mb-3\">{item.icon}</div>
-                <h3 className=\"text-xl font-bold mb-2\">{item.title}</h3>
-                <p className=\"text-rose-200\">{item.body}</p>
+              <div key={i} className="bg-rose-800 rounded-2xl p-6">
+                <div className="text-4xl mb-3">{item.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-rose-200">{item.body}</p>
               </div>
             ))}
           </div>
         )}
         {activeTab === 1 && (
-          <div className=\"grid gap-4 md:grid-cols-2\">
+          <div className="grid gap-4 md:grid-cols-2">
             {howToHelp.map((item, i) => (
-              <div key={i} className=\"bg-rose-800 rounded-2xl p-6\">
-                <div className=\"text-4xl mb-3\">{item.icon}</div>
-                <h3 className=\"text-xl font-bold mb-2\">{item.title}</h3>
-                <p className=\"text-rose-200\">{item.body}</p>
+              <div key={i} className="bg-rose-800 rounded-2xl p-6">
+                <div className="text-4xl mb-3">{item.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-rose-200">{item.body}</p>
               </div>
             ))}
           </div>
         )}
         {activeTab === 2 && (
-          <div className=\"grid gap-4 md:grid-cols-2\">
+          <div className="grid gap-4 md:grid-cols-2">
             {boundaries.map((item, i) => (
-              <div key={i} className=\"bg-rose-800 rounded-2xl p-6\">
-                <div className=\"text-4xl mb-3\">{item.icon}</div>
-                <h3 className=\"text-xl font-bold mb-2\">{item.title}</h3>
-                <p className=\"text-rose-200\">{item.body}</p>
+              <div key={i} className="bg-rose-800 rounded-2xl p-6">
+                <div className="text-4xl mb-3">{item.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-rose-200">{item.body}</p>
               </div>
             ))}
           </div>
         )}
         {activeTab === 3 && (
-          <div className=\"grid gap-4\">
+          <div className="grid gap-4">
             {helplines.map((item, i) => (
-              <a key={i} href={item.url} target=\"_blank\" rel=\"noopener noreferrer\"
-                className=\"bg-rose-800 hover:bg-rose-700 rounded-2xl p-6 flex items-center gap-6 transition\">
-                <div className=\"text-4xl\">{item.icon}</div>
+              <a key={i} href={item.url} target="_blank" rel="noopener noreferrer"
+                className="bg-rose-800 hover:bg-rose-700 rounded-2xl p-6 flex items-center gap-6 transition">
+                <div className="text-4xl">{item.icon}</div>
                 <div>
-                  <h3 className=\"text-xl font-bold\">{item.name}</h3>
-                  <p className=\"text-rose-200\">{item.number}</p>
-                  <p className=\"text-rose-300 text-sm mt-1\">{item.desc}</p>
+                  <h3 className="text-xl font-bold">{item.name}</h3>
+                  <p className="text-rose-200">{item.number}</p>
+                  <p className="text-rose-300 text-sm mt-1">{item.desc}</p>
                 </div>
               </a>
             ))}
           </div>
         )}
         {activeTab === 4 && (
-          <div className=\"grid gap-4 md:grid-cols-2\">
+          <div className="grid gap-4 md:grid-cols-2">
             {resources.map((item, i) => (
-              <a key={i} href={item.url} target=\"_blank\" rel=\"noopener noreferrer\"
-                className=\"bg-rose-800 hover:bg-rose-700 rounded-2xl p-6 flex items-center gap-4 transition\">
-                <span className=\"text-3xl\">{item.icon}</span>
-                <span className=\"font-medium\">{item.title}</span>
+              <a key={i} href={item.url} target="_blank" rel="noopener noreferrer"
+                className="bg-rose-800 hover:bg-rose-700 rounded-2xl p-6 flex items-center gap-4 transition">
+                <span className="text-3xl">{item.icon}</span>
+                <span className="font-medium">{item.title}</span>
               </a>
             ))}
           </div>
         )}
       </div>
-      <footer className=\"text-center text-rose-300 py-8 text-sm\">
-        <a href=\"/\" className=\"hover:text-white transition\">Back to Silent Safety</a>
+      <footer className="text-center text-rose-300 py-8 text-sm">
+        <a href="/" className="hover:text-white transition">Back to Silent Safety</a>
       </footer>
     </main>
   );
