@@ -70,8 +70,3 @@ export default function Diary() {
     </main>
   );
 }
-```
-
-Save with **Ctrl + S** then run:
-```
-code app\daily-structure\page.tsx

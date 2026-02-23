@@ -94,8 +94,3 @@ export default function Milestone() {
     </main>
   );
 }
-```
-
-Save with **Ctrl + S** then run:
-```
-code app\music\page.tsx

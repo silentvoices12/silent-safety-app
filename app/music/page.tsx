@@ -123,8 +123,3 @@ export default function Music() {
     </main>
   );
 }
-```
-
-Save with **Ctrl + S** then run:
-```
-code app\concentration\page.tsx

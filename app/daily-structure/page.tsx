@@ -86,8 +86,3 @@ export default function DailyStructure() {
     </main>
   );
 }
-```
-
-Save with **Ctrl + S** then run:
-```
-code app\celebration\page.tsx

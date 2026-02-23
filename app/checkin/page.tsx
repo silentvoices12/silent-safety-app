@@ -93,8 +93,3 @@ export default function CheckIn() {
     </main>
   );
 }
-```
-
-Save with **Ctrl + S** — don't check it yet, let's keep going! Next run:
-```
-code app\diary\page.tsx

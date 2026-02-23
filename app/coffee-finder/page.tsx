@@ -103,8 +103,3 @@ export default function Home() {
     </main>
   );
 }
-```
-
-Save with **Ctrl + S** then let's push everything live at once:
-```
-git add . ; git commit -m "add all features" ; git push ; vercel --prod

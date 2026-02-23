@@ -106,8 +106,3 @@ export default function Celebration() {
     </main>
   );
 }
-```
-
-Save with **Ctrl + S** then run:
-```
-code app\milestone\page.tsx

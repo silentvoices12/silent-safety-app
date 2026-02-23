@@ -160,8 +160,3 @@ export default function Concentration() {
     </main>
   );
 }
-```
-
-Save with **Ctrl + S** then run:
-```
-code app\coffee-finder\page.tsx
