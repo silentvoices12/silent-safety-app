@@ -8,6 +8,7 @@ export default function Home() {
         <div className="flex gap-4">
           <a href="/login" className="text-blue-200 hover:text-white transition">Login</a>
           <a href="/signup" className="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded-full text-sm font-semibold transition">Join Free</a>
+          <a href="/emergency" className="bg-red-600 hover:bg-red-500 text-white px-8 py-4 rounded-full text-lg font-semibold transition ml-4">🆘 Emergency Help</a>
         </div>
       </header>
 
