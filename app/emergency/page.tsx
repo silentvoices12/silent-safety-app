@@ -1,74 +1,55 @@
+"use client";
 export default function Emergency() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-red-950 to-red-900 text-white">
-      
-      {/* Header */}
-      <header className="flex justify-between items-center px-8 py-6">
-        <a href="/" className="text-2xl font-bold tracking-tight">💙 Silent Safety</a>
+    <main style={{background: "linear-gradient(135deg, #0a1628 0%, #1a0a0a 100%)", minHeight: "100vh", color: "#f5f0e8"}}>
+      <header style={{borderBottom: "1px solid rgba(201,168,76,0.2)", padding: "1.5rem 2rem", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+        <div style={{display: "flex", alignItems: "center", gap: "0.75rem"}}>
+          <img src="/logo.png" alt="Silent Voices" style={{height: "48px"}} />
+          <div>
+            <p style={{fontSize: "1.25rem", fontWeight: "bold", color: "#f5f0e8"}}>Silent Voices</p>
+            <p style={{fontSize: "0.7rem", color: "#c9a84c", letterSpacing: "0.15em", textTransform: "uppercase"}}>Recovery App</p>
+          </div>
+        </div>
+        <a href="/" style={{color: "#c8bfa8", textDecoration: "none", fontSize: "0.9rem"}}>← Back</a>
       </header>
 
-      {/* Hero */}
-      <section className="text-center px-8 py-16">
-        <div className="text-6xl mb-6">🆘</div>
-        <h2 className="text-4xl font-bold mb-4">You are not alone right now.</h2>
-        <p className="text-red-200 text-xl max-w-xl mx-auto mb-12">If you are in crisis, please reach out immediately. Help is available 24 hours a day, 7 days a week.</p>
+      <section style={{textAlign: "center", padding: "4rem 2rem 2rem"}}>
+        <div style={{fontSize: "4rem", marginBottom: "1rem"}}>🆘</div>
+        <h2 style={{fontSize: "3rem", fontWeight: "bold", color: "#f5f0e8", marginBottom: "1rem"}}>Emergency Help</h2>
+        <p style={{color: "#c8bfa8", fontSize: "1.1rem", maxWidth: "500px", margin: "0 auto"}}>You are not alone. Please reach out right now — help is available 24 hours a day.</p>
       </section>
 
-      {/* Emergency Contacts */}
-      <section className="max-w-2xl mx-auto px-8 pb-16 grid gap-6">
-        
-        <a href="tel:116123" className="bg-red-800 hover:bg-red-700 rounded-2xl p-6 flex items-center gap-6 transition">
-          <div className="text-5xl">📞</div>
-          <div>
-            <h3 className="text-xl font-bold">Samaritans</h3>
-            <p className="text-red-200">Call 116 123 — Free, 24/7</p>
-            <p className="text-red-300 text-sm mt-1">Confidential support for anyone in distress</p>
-          </div>
-        </a>
+      <div style={{maxWidth: "700px", margin: "0 auto", padding: "2rem", display: "grid", gap: "1rem"}}>
+        {[
+          { name: "Samaritans", number: "116 123", desc: "Free 24/7 emotional support", action: "tel:116123" },
+          { name: "FRANK Drug Helpline", number: "0300 123 6600", desc: "Free confidential drug advice", action: "tel:03001236600" },
+          { name: "Alcohol Change UK", number: "0300 123 1110", desc: "Alcohol support helpline", action: "tel:03001231110" },
+          { name: "Shout — Text Support", number: "Text SHOUT to 85258", desc: "Free 24/7 text crisis support", action: "sms:85258?body=SHOUT" },
+          { name: "Emergency Services", number: "999", desc: "If you or someone is in immediate danger", action: "tel:999" },
+        ].map((item, i) => (
+          <a key={i} href={item.action} style={{
+            background: "linear-gradient(135deg, #1a0f0f, #0a1628)",
+            border: "1px solid rgba(201,168,76,0.2)",
+            borderRadius: "1rem",
+            padding: "1.5rem 2rem",
+            textDecoration: "none",
+            color: "#f5f0e8",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}>
+            <div>
+              <h3 style={{fontSize: "1.2rem", fontWeight: "bold", color: "#f5f0e8", marginBottom: "0.25rem"}}>{item.name}</h3>
+              <p style={{color: "#c8bfa8", fontSize: "0.85rem"}}>{item.desc}</p>
+            </div>
+            <div style={{color: "#c9a84c", fontWeight: "bold", fontSize: "1.1rem", textAlign: "right"}}>{item.number}</div>
+          </a>
+        ))}
+      </div>
 
-        <a href="tel:03001234650" className="bg-red-800 hover:bg-red-700 rounded-2xl p-6 flex items-center gap-6 transition">
-          <div className="text-5xl">🤝</div>
-          <div>
-            <h3 className="text-xl font-bold">FRANK Drug Helpline</h3>
-            <p className="text-red-200">Call 0300 123 4650 — Free, 24/7</p>
-            <p className="text-red-300 text-sm mt-1">Friendly, confidential drugs advice</p>
-          </div>
-        </a>
-
-        <a href="tel:0800917820" className="bg-red-800 hover:bg-red-700 rounded-2xl p-6 flex items-center gap-6 transition">
-          <div className="text-5xl">💊</div>
-          <div>
-            <h3 className="text-xl font-bold">Alcohol Change UK</h3>
-            <p className="text-red-200">Call 0800 917 8282 — Free</p>
-            <p className="text-red-300 text-sm mt-1">Support for alcohol dependency</p>
-          </div>
-        </a>
-
-        <a href="sms:85258" className="bg-red-800 hover:bg-red-700 rounded-2xl p-6 flex items-center gap-6 transition">
-          <div className="text-5xl">💬</div>
-          <div>
-            <h3 className="text-xl font-bold">Shout Crisis Text Line</h3>
-            <p className="text-red-200">Text SHOUT to 85258 — Free, 24/7</p>
-            <p className="text-red-300 text-sm mt-1">Text based support if you can't talk</p>
-          </div>
-        </a>
-
-        <a href="tel:999" className="bg-red-600 hover:bg-red-500 rounded-2xl p-6 flex items-center gap-6 transition">
-          <div className="text-5xl">🚨</div>
-          <div>
-            <h3 className="text-xl font-bold">Emergency Services</h3>
-            <p className="text-red-200">Call 999</p>
-            <p className="text-red-300 text-sm mt-1">If you or someone else is in immediate danger</p>
-          </div>
-        </a>
-
-      </section>
-
-      {/* Footer */}
-      <footer className="text-center text-red-300 py-8 text-sm">
-        <a href="/" className="hover:text-white transition">← Back to Silent Safety</a>
+      <footer style={{textAlign: "center", padding: "3rem 2rem"}}>
+        <a href="/" style={{color: "#c8bfa8", textDecoration: "none", fontSize: "0.9rem"}}>← Back to Silent Voices</a>
       </footer>
-
     </main>
-  )
+  );
 }
