@@ -4,7 +4,8 @@ export default function Home() {
       
       {/* Header */}
       <header className="flex justify-between items-center px-8 py-6">
-        <h1 className="text-2xl font-bold tracking-tight">💙 Silent Safety</h1>
+        <img src="/logo.png" alt="Silent Voices" className="h-12" />
+        <img src="/logo.png" alt="Silent Voices" className="h-12" />
         <div className="flex gap-4">
           <a href="/login" className="text-blue-200 hover:text-white transition">Login</a>
           <a href="/signup" className="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded-full text-sm font-semibold transition">Join Free</a>
