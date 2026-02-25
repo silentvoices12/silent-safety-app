@@ -2,41 +2,37 @@
 
 export default function Home() {
   return (
-    <main style={{ textAlign: 'center', padding: '50px', fontFamily: 'sans-serif' }}>
-      {/* 1. The Logo */}
-      <img 
-        src="logo.png" 
-        alt="Logo" 
-        style={{ width: '120px', borderRadius: '20px' }} 
-        onError={(e) => (e.currentTarget.style.display = 'none')} 
-      />
-
+    <div style={{ textAlign: 'center', padding: '50px', fontFamily: 'sans-serif' }}>
+      {/* The Logo */}
+      <img src="/logo.png" alt="Logo" style={{ width: '120px', marginBottom: '20px' }} />
+      
       <h1>Silent Voices Recovery</h1>
-      <p>Healing and Community Support</p>
-
-      {/* 2. The Download Button */}
-      <div style={{ margin: '30px 0' }}>
-        <a href="app-debug.apk" download="SilentVoices.apk">
+      
+      <div style={{ margin: '40px 0' }}>
+        {/* We use the absolute path starting with / */}
+        <a href="/app-debug.apk" download="SilentVoices.apk">
           <button style={{ 
-            padding: '15px 30px', 
+            padding: '20px 40px', 
             backgroundColor: '#28a745', 
             color: 'white', 
-            border: 'none', 
             borderRadius: '50px',
-            fontSize: '18px',
-            cursor: 'pointer',
-            fontWeight: 'bold'
+            fontSize: '20px',
+            border: 'none',
+            fontWeight: 'bold',
+            cursor: 'pointer'
           }}>
-            Download Android App
+            Download Official App
           </button>
         </a>
       </div>
 
-      {/* 3. The Instruction Box */}
-      <div style={{ marginTop: '20px', color: '#666', fontSize: '14px' }}>
-        <p><strong>Note:</strong> If the button doesn't start the download, <br /> 
-        long-press it and select "Download link".</p>
+      {/* Basic Comment Box */}
+      <div style={{ marginTop: '50px', borderTop: '1px solid #eee', paddingTop: '30px' }}>
+        <h3>Community Comments</h3>
+        <textarea placeholder="Write a message..." style={{ width: '100%', maxWidth: '400px', padding: '10px', height: '100px' }} />
+        <br />
+        <button onClick={() => alert('Feature coming soon!')} style={{ marginTop: '10px', padding: '10px 20px' }}>Post</button>
       </div>
-    </main>
+    </div>
   );
 }
