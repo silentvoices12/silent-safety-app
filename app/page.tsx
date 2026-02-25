@@ -1,43 +1,33 @@
-import React from 'react';
-
 export default function Home() {
   return (
-    <div style={{ 
-      display: 'flex', 
-      flexDirection: 'column', 
-      alignItems: 'center', 
-      justifyContent: 'center', 
-      minHeight: '100vh',
-      padding: '20px',
-      fontFamily: 'sans-serif',
-      textAlign: 'center'
-    }}>
-      {/* logo.png must be in your /public folder */}
-      <img src="/logo.png" alt="Logo" style={{ width: '120px', marginBottom: '20px' }} />
-      
+    <main style={{ textAlign: 'center', padding: '50px', fontFamily: 'sans-serif' }}>
       <h1>Silent Voices Recovery</h1>
-      <p>Your safe space for healing and community.</p>
-
-      {/* app-debug.apk must be in your /public folder */}
-      <a href="/app-debug.apk" download="SilentVoices.apk" style={{ marginTop: '20px' }}>
-        <button style={{
-          backgroundColor: '#28a745',
-          color: 'white',
-          padding: '15px 30px',
-          border: 'none',
-          borderRadius: '8px',
-          fontSize: '18px',
-          cursor: 'pointer',
-          fontWeight: 'bold'
-        }}>
-          Download App
-        </button>
-      </a>
-
-      <div style={{ marginTop: '30px', color: '#666' }}>
-        <h3>Instructions:</h3>
-        <p>1. Tap Download. <br/> 2. Select "Download Anyway." <br/> 3. Open the file to install.</p>
+      <p>Healing, Support, and Community</p>
+      
+      <div style={{ margin: '20px 0' }}>
+        <a href="/app-debug.apk" download="SilentVoices.apk">
+          <button style={{ 
+            padding: '15px 30px', 
+            backgroundColor: 'green', 
+            color: 'white', 
+            border: 'none', 
+            borderRadius: '5px',
+            fontSize: '18px',
+            cursor: 'pointer' 
+          }}>
+            Download Android App
+          </button>
+        </a>
       </div>
-    </div>
+
+      <div style={{ marginTop: '30px', textAlign: 'left', display: 'inline-block' }}>
+        <h3>Instructions:</h3>
+        <ol>
+          <li>Tap the button above.</li>
+          <li>If your phone warns you, tap "Download Anyway."</li>
+          <li>Open the file and tap "Install."</li>
+        </ol>
+      </div>
+    </main>
   );
 }
