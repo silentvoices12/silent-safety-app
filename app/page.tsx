@@ -1,8 +1,45 @@
 import Image from "next/image";
 
 export default function Home() {
+  return (export default function Home() {
   return (
-    <main style={{background: "linear-gradient(135deg, #0a1628 0%, #0d2818 50%, #0a1628 100%)", minHeight: "100vh", color: "#f5f0e8"}}>
+    <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '50px', fontFamily: 'sans-serif' }}>
+      
+      {/* 1. Your Logo */}
+      <img src="/logo.png" alt="Silent Voices Logo" style={{ width: '150px', borderRadius: '20px', marginBottom: '20px' }} />
+
+      {/* 2. Your Heading */}
+      <h1 style={{ color: '#333' }}>Silent Voices Recovery</h1>
+      <p style={{ maxWidth: '400px', textAlign: 'center', color: '#666' }}>
+        Healing, Support, and Community. Download our official Android app below.
+      </p>
+
+      {/* 3. The Download Button */}
+      <a href="/app-debug.apk" download="SilentVoices.apk" style={{ marginTop: '20px' }}>
+        <button style={{
+          backgroundColor: '#28a745',
+          color: 'white',
+          padding: '15px 30px',
+          border: 'none',
+          borderRadius: '50px',
+          fontSize: '18px',
+          cursor: 'pointer',
+          fontWeight: 'bold'
+        }}>
+          Download for Android
+        </button>
+      </a>
+
+      {/* 4. Simple Instructions */}
+      <div style={{ marginTop: '40px', fontSize: '14px', color: '#888', textAlign: 'center' }}>
+        <p><strong>Instructions:</strong></p>
+        <p>1. Tap Download. 2. Select "Download Anyway." <br/> 3. Open the file and tap "Install."</p>
+      </div>
+
+    </main>
+  );
+}
+    )", minHeight: "100vh", color: "#f5f0e8"}}>
 
       <header style={{borderBottom: "1px solid rgba(201,168,76,0.2)", padding: "1.5rem 2rem", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
         <div style={{display: "flex", alignItems: "center", gap: "0.75rem"}}>
